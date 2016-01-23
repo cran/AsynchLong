@@ -110,7 +110,7 @@ elements are returned:
 \references{
 Cao, H., Zeng, D., and Fine, J. P. (2014)
 Regression Analysis of sparse asynchronous longitudinal data.
-Journal of the Royal Statistical Society: Series B, in press.
+Journal of the Royal Statistical Society: Series B, 77, 755-776.
 }
 \author{
 Hongyuan Cao, Donglin Zeng, Jason P. Fine, and Shannon T. Holloway

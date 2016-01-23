@@ -1,5 +1,5 @@
 #----------------------------------------------------------------------#
-# asynchTI : Time-invariant coefficients                               #
+# asynchHK : Half-Kernel Time-invariant coefficients                   #
 #----------------------------------------------------------------------#
 #                                                                      #
 # data.x    : Matrix of covariates. It is assumed that the first column#
@@ -24,12 +24,12 @@
 #             implementation                                           #
 #                                                                      #
 #----------------------------------------------------------------------#
-asynchTI <- function(data.x, 
+asynchHK <- function(data.x, 
                      data.y,
-                     kType = "epan", 
-                     lType = "identity",
+                     kType="epan", 
+                     lType="identity",
                      bw = NULL, 
-                     nCores = 1, ...) {
+                     nCores = 1, ...){
 
   #------------------------------------------------------------------#
   # Process and verify input datasets                                #
@@ -51,7 +51,7 @@ asynchTI <- function(data.x,
                          kType = kType,
                          lType = lType,
                          time = NULL,
-                         distanceFunction = "distanceTI", 
+                         distanceFunction = "distanceHK", 
                          nCores = nCores, ...)
 
   } else {
@@ -62,7 +62,7 @@ asynchTI <- function(data.x,
                           kType = kType,
                           lType = lType,
                           time = NULL,
-                          distanceFunction = "distanceTI", ...)
+                          distanceFunction = "distanceHK", ...)
 
   }
 

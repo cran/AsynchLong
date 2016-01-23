@@ -1,30 +1,32 @@
-#------------------------------------------------------------------------------#
-# uFunc : Estimating equation                                                  #
-#------------------------------------------------------------------------------#
-#                                                                              #
-# pars      : Current parameter estimates                                      #
-#                                                                              #
-# data.y    : Matrix of responses. It is assumed that the first column         #
-#             contains integer patient IDs, the second column contains the     #
-#             time of measurement, and the third column contains the value of  #
-#             the measurement.                                                 #
-#                                                                              #
-# data.x    : Matrix of covariates. The columns contain only the values        #
-#             of the covariates.                                               #
-#                                                                              #
-# kernel    : a list, ith element containing a matrix of the yIs distances     #
-#                                                                              #
-# lType     : a character. One of "identity", "log", "logistic". Specifies the #
-#             form of the link function.                                       #
-#                                                                              #
-# xIs       : list of length nrow(data.y), the elements of which list the      #
-#             rows of data.x corresponding the patient in the ith row of data.y#
-#                                                                              #
-#------------------------------------------------------------------------------#
-#                                                                              #
-# Returns the value of the estimating equations.                               #
-#                                                                              #
-#------------------------------------------------------------------------------#
+#----------------------------------------------------------------------#
+# uFunc : Estimating equation                                          #
+#----------------------------------------------------------------------#
+#                                                                      #
+# pars      : Current parameter estimates                              #
+#                                                                      #
+# data.y    : Matrix of responses. It is assumed that the first column #
+#             contains integer patient IDs, the second column contains #
+#             the time of measurement, and the third column contains   #
+#             the value of the measurement.                            #
+#                                                                      #
+# data.x    : Matrix of covariates. The columns contain only the values#
+#             of the covariates.                                       #
+#                                                                      #
+# kernel    : a list, ith element containing a matrix of the yIs       #
+#             distances                                                #
+#                                                                      #
+# lType     : a character. One of "identity", "log", "logistic".       #
+#             Specifies the form of the link function.                 #
+#                                                                      #
+# xIs       : list of length nrow(data.y), the elements of which list  #
+#             the rows of data.x corresponding the patient in the ith  #
+#             row of data.y                                            #
+#                                                                      #
+#----------------------------------------------------------------------#
+#                                                                      #
+# Returns the value of the estimating equations.                       #
+#                                                                      #
+#----------------------------------------------------------------------#
 uFunc <- function(pars,
                   data.y, 
                   data.x,
@@ -52,7 +54,8 @@ uFunc <- function(pars,
 
     xI <- xIs[[ x ]]$v
 
-    res <-  colSums( data.x[xI,,drop=FALSE] * kernel[[ x ]] * {y3[x] - mu[xI]} )
+    res <-  colSums( data.x[xI,,drop=FALSE] * kernel[[ x ]] * 
+                     {y3[x] - mu[xI]} )
 
     return(res)
   }
@@ -73,6 +76,6 @@ uFunc <- function(pars,
 
 }
 
-cmp_uFunc <- cmpfun(uFunc)
+cmp_uFunc <- compiler::cmpfun(uFunc)
 
 

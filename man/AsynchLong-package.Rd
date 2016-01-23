@@ -17,20 +17,24 @@ Regression Analysis of Sparse Asynchronous Longitudinal Data
 \tabular{ll}{
   Package: \tab AsynchLong \cr
   Type: \tab Package \cr
-  Version: \tab 1.0 \cr
-  Date: \tab 2015-02-06 \cr
+  Version: \tab 2.0 \cr
+  Date: \tab 2016-01-22 \cr
   License: \tab GPL-2 \cr
 }
 
 }
 \author{
-Hongyuan Cao, Donglin Zeng, Jason P. Fine, and Shannon T. Holloway
+Hongyuan Cao, Jason P. Fine, Jialiang Li, Donglin Zeng, and Shannon T. Holloway
 Maintainer: Shannon T. Holloway <sthollow@ncsu.edu>
 }
 \references{
 Cao, H., Zeng, D., and Fine, J. P. (2015)
 Regression Analysis of sparse asynchronous longitudinal data.
-Journal of the Royal Statistical Society: Series B, in press.
+Journal of the Royal Statistical Society: Series B, 77, 755-776.
+
+Cao, H., Li, Jialiang, and Fine, J. P. (2015).
+On last observation carried forward and asynchronous longitudinal regression analysis.
+Electronic Journal of Statistics, submitted.
 }
 \keyword{ package }
 \seealso{

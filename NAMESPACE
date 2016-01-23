@@ -1,5 +1,10 @@
-import(compiler)
-import(parallel)
+import(compiler,
+       parallel,
+       graphics,
+       stats,
+       methods)
 export("asynchTD",
        "asynchTI",
-       "asynchLV")
+       "asynchLV",
+       "asynchWLV",
+       "asynchHK")

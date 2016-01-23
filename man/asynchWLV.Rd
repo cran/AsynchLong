@@ -1,15 +1,16 @@
-\name{asynchTI}
-\alias{asynchTI}
+\name{asynchWLV}
+\alias{asynchWLV}
 \title{
-Regression Analysis for Time-Invariant Coefficients
+Weighted Last Observation Carried Forward Regression Analysis for Time-Invariant Coefficients
 }
 \description{
 Estimation of regression models for sparse asynchronous longitudinal
-observations with time-invariant coefficients.}
+observations using the weighted last value carried forward 
+approach with time-invariant coefficients.}
 
 \usage{
-asynchTI(data.x, data.y, kType = "epan", lType = "identity", bw = NULL, 
-         nCores = 1, ...)
+asynchWLV(data.x, data.y, kType = "epan", lType = "identity", bw = NULL, 
+          nCores = 1, ...)
 }
 \arguments{
   \item{data.x}{
@@ -98,23 +99,23 @@ elements are returned:
 }
 
 \references{
-Cao, H., Zeng, D., and Fine, J. P. (2015)
-Regression Analysis of sparse asynchronous longitudinal data.
-Journal of the Royal Statistical Society: Series B, 77, 755-776.
+Cao, H., Li, Jialiang, and Fine, J. P. (2015).
+On last observation carried forward and asynchronous longitudinal regression analysis.
+Electronic Journal of Statistics, submitted.
 }
 \author{
-Hongyuan Cao, Donglin Zeng, Jason P. Fine, and Shannon T. Holloway
+Hongyuan Cao, Jialiang Li, Jason P. Fine, and Shannon T. Holloway
 }
 
 \examples{
 
   data(asynchDataTI)
 
-  res <- asynchTI(data.x = TI.x, 
-                  data.y = TI.y,
-                  bw = c(0.05, 0.03),
-                  kType = "epan", 
-                  lType = "identity")
+  res <- asynchWLV(data.x = TI.x, 
+                   data.y = TI.y,
+                   bw = c(0.05, 0.03),
+                   kType = "epan", 
+                   lType = "identity")
 
 }
 

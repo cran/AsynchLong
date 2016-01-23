@@ -1,27 +1,29 @@
-#------------------------------------------------------------------------------#
-# uFunc : Estimating equation                                                  #
-#------------------------------------------------------------------------------#
-#                                                                              #
-# pars      : Current parameter estimates                                      #
-#                                                                              #
-# data.y    : Matrix of responses. It is assumed that the first column         #
-#             contains integer patient IDs, the second column contains the     #
-#             time of measurement, and the third column contains the value of  #
-#             the measurement.                                                 #
-#                                                                              #
-# data.x    : Matrix of covariates. The columns contain only the values        #
-#             of the covariates.                                               #
-#                                                                              #
-# kernel    : a list, ith element containing a matrix of the yIs distances     #
-#                                                                              #
-# xIs       : list of length nrow(data.y), the elements of which list the      #
-#             rows of data.x corresponding the patient in the ith row of data.y#
-#                                                                              #
-#------------------------------------------------------------------------------#
-#                                                                              #
-# Returns the value of the estimating equations.                               #
-#                                                                              #
-#------------------------------------------------------------------------------#
+#----------------------------------------------------------------------#
+# uFunc : Estimating equation                                          #
+#----------------------------------------------------------------------#
+#                                                                      #
+# pars      : Current parameter estimates                              #
+#                                                                      #
+# data.y    : Matrix of responses. It is assumed that the first column #
+#             contains integer patient IDs, the second column contains #
+#             the time of measurement, and the third column contains   #
+#             the value of the measurement.                            #
+#                                                                      #
+# data.x    : Matrix of covariates. The columns contain only the values#
+#             of the covariates.                                       #
+#                                                                      #
+# kernel    : a list, ith element containing a matrix of the yIs       #
+#             distances                                                #
+#                                                                      #
+# xIs       : list of length nrow(data.y), the elements of which list  #
+#             the rows of data.x corresponding the patient in the ith  #
+#             row of data.y                                            #
+#                                                                      #
+#----------------------------------------------------------------------#
+#                                                                      #
+# Returns the value of the estimating equations.                       #
+#                                                                      #
+#----------------------------------------------------------------------#
 uFuncIden <- function(data.y, 
                       data.x,
                       kernel, 
@@ -50,9 +52,9 @@ uFuncIden <- function(data.y,
 
       xI <- xIs[[ k ]]$v
 
-      tx <- data.x[xI,,drop=FALSE] * kernel[[k]]
+      tx <- data.x[xI,,drop=FALSE] * kernel[[ k ]]
 
-      bVec[xI,] <- bVec[xI,] + tx * data.y[k, 3L]
+      bVec[xI,] <- bVec[xI,] + tx * data.y[k,3L]
 
       aMat <- aMat + t(tx) %*% data.x[xI,,drop=FALSE]
 
