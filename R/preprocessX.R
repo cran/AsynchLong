@@ -14,7 +14,7 @@ preprocessX <- function(data.x) {
   #------------------------------------------------------------------#
   if( !is.integer(data.x[,1L]) ) {
     data.x[,1L] <- as.integer(round(data.x[,1L],0))
-    cat("Patient IDs in data.x were coerced to integer.\n")
+    message("patient IDs in data.x were coerced to integer.\n")
   }
 
   intPresent <- FALSE

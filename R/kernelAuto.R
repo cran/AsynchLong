@@ -47,7 +47,8 @@ kernelAuto <- function(data.x,
                        lType,
                        time,
                        distanceFunction,
-                       nCores, ...){
+                       nCores, 
+                       verbose, ...){
 
   #------------------------------------------------------------------#
   # Number of covariates (assumes column of ids and measurement times#
@@ -320,8 +321,10 @@ kernelAuto <- function(data.x,
   results[,5L] <- bw[opt_h]
   results[,6L] <- tminMSE
 
-  print(results)
-  cat("\n")
+  if (verbose) {
+    print(results)
+    cat("\n")
+  }
 
   return( list( "betaHat" = results[,1L],
                 "stdErr"  = results[,2L],

@@ -18,7 +18,7 @@ Regression Analysis of Sparse Asynchronous Longitudinal Data
   Package: \tab AsynchLong \cr
   Type: \tab Package \cr
   Version: \tab 2.0 \cr
-  Date: \tab 2016-01-22 \cr
+  Date: \tab 2010-01-08 \cr
   License: \tab GPL-2 \cr
 }
 
@@ -32,9 +32,9 @@ Cao, H., Zeng, D., and Fine, J. P. (2015)
 Regression Analysis of sparse asynchronous longitudinal data.
 Journal of the Royal Statistical Society: Series B, 77, 755-776.
 
-Cao, H., Li, Jialiang, and Fine, J. P. (2015).
+Cao, H., Li, Jialiang, and Fine, J. P. (2016).
 On last observation carried forward and asynchronous longitudinal regression analysis.
-Electronic Journal of Statistics, submitted.
+Electronic Journal of Statistics, 10, 1155-1180.
 }
 \keyword{ package }
 \seealso{

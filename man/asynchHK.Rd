@@ -9,7 +9,7 @@ observations using a half-kernel estimation approach with time-invariant coeffic
 
 \usage{
 asynchHK(data.x, data.y, kType = "epan", lType = "identity", bw = NULL, 
-         nCores = 1, ...)
+         nCores = 1, verbose = TRUE, ...)
 }
 \arguments{
   \item{data.x}{
@@ -66,6 +66,7 @@ asynchHK(data.x, data.y, kType = "epan", lType = "identity", bw = NULL,
                 search space will be distributed across the cores
                 using parallel's parLapply.
   }
+  \item{verbose }{ An object of class logical. TRUE results in screen prints.}
   \item{... }{Ignored. }
 }
 \details{
@@ -98,9 +99,9 @@ elements are returned:
 }
 
 \references{
-Cao, H., Li, Jialiang, and Fine, J. P. (2015).
+Cao, H., Li, Jialiang, and Fine, J. P. (2016).
 On last observation carried forward and asynchronous longitudinal regression analysis.
-Electronic Journal of Statistics, submitted.
+Electronic Journal of Statistics, 10, 1155--1180.
 }
 \author{
 Hongyuan Cao, Jialiang Li, Jason P. Fine, and Shannon T. Holloway

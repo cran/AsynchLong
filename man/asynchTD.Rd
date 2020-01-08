@@ -5,7 +5,7 @@
              longitudinal observations with time-dependent coefficients.}
 
 \usage{asynchTD(data.x, data.y, times, kType = "epan", lType = "identity", 
-                bw=NULL, nCores = 1, ...)}
+                bw=NULL, nCores = 1, verbose = TRUE, ...)}
 \arguments{
   \item{data.x}{
                 A data.frame of covariates. 
@@ -70,6 +70,7 @@
                 using parallel's parLapply.
   }
 
+  \item{verbose }{ An object of class logical. TRUE results in screen prints.}
   \item{... }{Ignored. }
 }
 

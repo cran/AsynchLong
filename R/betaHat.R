@@ -62,7 +62,7 @@ betaHat <- function(data.y,
   #------------------------------------------------------------------#
   nCov <- ncol(data.x) - 2L
 
-  if( is(guess, "NULL") ) {
+  if( is.null(x = guess) ) {
     beta <- array(runif(nCov, min=0.0, max=0.5))
   } else {
     beta <- guess

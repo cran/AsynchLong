@@ -33,7 +33,8 @@ asynchTD <- function(data.x,
                      kType = "epan", 
                      lType = "identity",
                      bw = NULL, 
-                     nCores = 1, ...) {
+                     nCores = 1, 
+                     verbose = TRUE, ...) {
 
   #------------------------------------------------------------------#
   # Process and verify input datasets                                #
@@ -63,7 +64,7 @@ asynchTD <- function(data.x,
   optH <- bHat
   minMSE <- bHat
 
-  if( !is(bw,"NULL") ) {
+  if( !is.null(x = bw) ) {
     if( length(bw) > 1L ) {
       stop("Only a single bandwidth can be provided.")
     }
@@ -73,7 +74,7 @@ asynchTD <- function(data.x,
 
     cat("Time point: ", times[var], "\n")
 
-    if( is(bw,"NULL") ) {
+    if( is.null(x = bw) ) {
 
       result <- kernelAuto(data.x = data.x,
                            data.y = data.y,
@@ -81,7 +82,8 @@ asynchTD <- function(data.x,
                            lType = lType,
                            time = times[var],
                            distanceFunction = "distanceTD",
-                           nCores = nCores, ...)
+                           nCores = nCores, 
+                           verbose = verbose, ...)
 
       bHat[var,] <- result$betaHat
       sdVec[var,] <- result$stdErr
@@ -96,7 +98,8 @@ asynchTD <- function(data.x,
                             kType = kType,
                             lType = lType,
                             time = times[var],
-                            distanceFunction = "distanceTD", ...)
+                            distanceFunction = "distanceTD", 
+                            verbose = verbose, ...)
 
       bHat[var,] <- result$betaHat
       sdVec[var,] <- result$stdErr
@@ -108,7 +111,7 @@ asynchTD <- function(data.x,
   zv <- bHat/sdVec
   pv <- 2.0*pnorm(-abs(zv))
 
-  if( is.null(bw) ) {
+  if( is.null(x = bw) ) {
     return( list( "betaHat" = bHat,
                   "stdErr"  = sdVec,
                   "zValue"  = zv,

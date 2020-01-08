@@ -26,10 +26,11 @@
 #----------------------------------------------------------------------#
 asynchHK <- function(data.x, 
                      data.y,
-                     kType="epan", 
-                     lType="identity",
+                     kType = "epan", 
+                     lType = "identity",
                      bw = NULL, 
-                     nCores = 1, ...){
+                     nCores = 1, 
+                     verbose = TRUE, ...){
 
   #------------------------------------------------------------------#
   # Process and verify input datasets                                #
@@ -44,7 +45,7 @@ asynchHK <- function(data.x,
   data.y[,2L] <- (data.y[,2L] - rge[1L])/(rge[2L] - rge[1L])
   data.x[,2L] <- (data.x[,2L] - rge[1L])/(rge[2L] - rge[1L])
 
-  if( is(bw, "NULL") ) {
+  if( is.null(x = bw) ) {
 
     result <- kernelAuto(data.x = data.x,
                          data.y = data.y,
@@ -52,7 +53,8 @@ asynchHK <- function(data.x,
                          lType = lType,
                          time = NULL,
                          distanceFunction = "distanceHK", 
-                         nCores = nCores, ...)
+                         nCores = nCores, 
+                         verbose = verbose, ...)
 
   } else {
 
@@ -62,7 +64,8 @@ asynchHK <- function(data.x,
                           kType = kType,
                           lType = lType,
                           time = NULL,
-                          distanceFunction = "distanceHK", ...)
+                          distanceFunction = "distanceHK", 
+                          verbose = verbose, ...)
 
   }
 

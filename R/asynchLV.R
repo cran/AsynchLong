@@ -18,7 +18,8 @@
 #----------------------------------------------------------------------#
 asynchLV <- function(data.x, 
                      data.y, 
-                     lType = "identity", ...) {
+                     lType = "identity", 
+                     verbose = TRUE, ...) {
 
   #------------------------------------------------------------------#
   # Process and verify input datasets                                #
@@ -39,7 +40,8 @@ asynchLV <- function(data.x,
                         kType = NULL,
                         lType = lType,
                         time = NULL,
-                        distanceFunction = "distanceLV", ...)
+                        distanceFunction = "distanceLV", 
+                        verbose = verbose, ...)
 
   return( result )
 

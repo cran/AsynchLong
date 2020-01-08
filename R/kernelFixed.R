@@ -43,7 +43,7 @@ kernelFixed <- function(data.x,
                         kType, 
                         lType,
                         time,
-                        distanceFunction, ...){
+                        distanceFunction, verbose, ...){
 
   #------------------------------------------------------------------#
   # bandwidths must be positive.                                     #
@@ -101,7 +101,7 @@ kernelFixed <- function(data.x,
 
   for( bd in 1L:lbd ) {
 
-    if(distanceFunction != "distanceLV") {
+    if(distanceFunction != "distanceLV" && verbose) {
       cat("Bandwidth: ", bandwidth[bd], "\n")
     }
 
@@ -137,8 +137,10 @@ kernelFixed <- function(data.x,
     results[,3L] <- bHat[bd,]/sdVec[bd,]
     results[,4L] <- 2.0*stats::pnorm(-abs(results[,3L]))
 
-    print(results)
-    cat("\n")
+    if (verbose) {
+      print(results)
+      cat("\n")
+    }
   }
 
   zv <- bHat/sdVec

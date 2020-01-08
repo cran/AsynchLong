@@ -11,7 +11,7 @@
 }
 
 \usage{
-       asynchLV(data.x, data.y, lType = "identity", ...)
+       asynchLV(data.x, data.y, lType = "identity", verbose = TRUE, ...)
 }
 
 \arguments{
@@ -40,6 +40,7 @@
                 Must be one of \{"identity","log","logistic"\}.
   }
 
+  \item{verbose }{ An object of class logical. TRUE results in screen prints.}
   \item{... }{Ignored. }
 
 }

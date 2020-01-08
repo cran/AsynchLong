@@ -36,9 +36,6 @@ TD.y is a data frame with 3939 observations on the following 3 variables.
 \item{\code{Y}}{the response measured at time t.}
 }
 }
-\usage{
-asynchDataTD
-}
 \references{
 Cao, H., Zeng, D., and Fine, J. P. (2015)
 Regression Analysis of sparse asynchronous longitudinal data.

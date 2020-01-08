@@ -88,8 +88,8 @@ SD <- function(bHat,
 
   invdU <- try(solve(dU), silent = TRUE)
 
-  if( class(invdU) == 'try-error' ) {
-    cat("Unable to invert derivative of estimating equation.\n")
+  if( is(invdU, 'try-error') ) {
+    cat("unable to invert derivative of estimating equation\n")
     stop(attr(invdU,"condition"), call. = FALSE)
   }
 

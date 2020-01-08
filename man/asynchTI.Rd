@@ -9,7 +9,7 @@ observations with time-invariant coefficients.}
 
 \usage{
 asynchTI(data.x, data.y, kType = "epan", lType = "identity", bw = NULL, 
-         nCores = 1, ...)
+         nCores = 1, verbose = TRUE, ...)
 }
 \arguments{
   \item{data.x}{
@@ -66,6 +66,7 @@ asynchTI(data.x, data.y, kType = "epan", lType = "identity", bw = NULL,
                 search space will be distributed across the cores
                 using parallel's parLapply.
   }
+  \item{verbose }{ An object of class logical. TRUE results in screen prints.}
   \item{... }{Ignored. }
 }
 \details{
