@@ -17,15 +17,15 @@ Regression Analysis of Sparse Asynchronous Longitudinal Data
 \tabular{ll}{
   Package: \tab AsynchLong \cr
   Type: \tab Package \cr
-  Version: \tab 2.0 \cr
-  Date: \tab 2010-01-08 \cr
+  Version: \tab 2.2 \cr
+  Date: \tab 2022-06-05 \cr
   License: \tab GPL-2 \cr
 }
 
 }
 \author{
 Hongyuan Cao, Jason P. Fine, Jialiang Li, Donglin Zeng, and Shannon T. Holloway
-Maintainer: Shannon T. Holloway <sthollow@ncsu.edu>
+Maintainer: Shannon T. Holloway <shannon.t.hollowa@gmail.com>
 }
 \references{
 Cao, H., Zeng, D., and Fine, J. P. (2015)
