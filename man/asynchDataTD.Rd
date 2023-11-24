@@ -15,10 +15,10 @@ with intensity rate 5, and similarly for the number of observation times
 for the covariates. Observation times are generated from a uniform
 distribution Unif(0,1) independently. The covariate process is
 Gaussian, with values at fixed time points being multivariate normal
-with mean 0, variance 1 and correlation exp(-|t_{ij} - t_{ik}|).
-The responses were generated from Y(t) = beta0 + X(t)*beta1 + epsilon(t),
-where beta0 = 0.5, beta1 = 0.4t + 0.5, and epsilon(t) is Gaussian with
-mean 0, variance 1 and cov(e(s),e(t)) = 2^{-|t-s|}.
+with mean 0, variance 1 and correlation \eqn{\exp(-|t_{ij} - t_{ik}|)}{exp(-|t_ij - t_ik|)}.
+The responses were generated from \eqn{Y(t) = \beta_0 + X(t)*\beta_1 + \epsilon(t)}{Y(t) = beta0 + X(t)*beta1 + epsilon(t)},
+where \eqn{\beta_0}{beta0} = 0.5, \eqn{\beta_1}{beta1} = 0.4t + 0.5, and \eqn{\epsilon(t)}{epsilon(t)} is Gaussian with
+mean 0, variance 1 and \eqn{\mathrm{cov}(\epsilon(s),\epsilon(t)) = 2^{-|t-s|}}{cov(e(s),e(t)) = 2^(-|t-s|)}.
 Covariates are stored as TD.x. Responses are stored as
 TD.y.
 }

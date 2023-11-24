@@ -53,7 +53,7 @@ asynchTI(data.x, data.y, kType = "epan", lType = "identity", bw = NULL,
                 If NULL, an optimal bandwidth will be determined
                 using an adaptive selection procedure. 
                 The range of the bandwidth search space is taken
-                to be 2*(Q3 - Q1)*n^{-0.7} to 2*(Q3 - Q1)*n^{-0.3},
+                to be \eqn{2*(Q3 - Q1)*n^{-0.7} to 2*(Q3 - Q1)*n^{-0.3}}{2*(Q3 - Q1)*n^(-0.7) to 2*(Q3 - Q1)*n^(-0.3)},
                 where Q3 is the 0.75 quantile and Q1 is the 0.25 quantile
                 of the pooled sample of measurement times for the covariate
                 and response, and n is the number of patients.

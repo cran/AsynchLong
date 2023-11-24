@@ -1,5 +1,6 @@
-54efd0d98f03499c5b9d228344f23816 *DESCRIPTION
+5300eb3b14bede18caadb18070c4e053 *DESCRIPTION
 7a1298493b03b5658c733f4021a8f340 *NAMESPACE
+9fc4d1eb2cea61a631a38b3ba8033470 *NEWS
 86fbecffe27dce4b16d5f385a0fc95df *R/SD.R
 e68d12d2c0b211b6bb192950912417f2 *R/asynchHK.R
 efd47cb6efd2654811370553af5a98b9 *R/asynchLV.R
@@ -21,10 +22,10 @@ e55d907ed91b7d7acc5aca4dec916e40 *R/uFuncIden.R
 e2759d5923816fa8a69de35405c4df0e *data/asynchDataTD.RData
 7217f70faa29332a062207204dc1a9ad *data/asynchDataTI.RData
 1471009a649eb881da064677b20bafaf *man/AsynchLong-package.Rd
-763fc4caab5438a1719f23586a9c3851 *man/asynchDataTD.Rd
-26fc47d42cd46196e8287f9e7352390b *man/asynchDataTI.Rd
-1519e8e44ca0a1cb064a57e544bf4611 *man/asynchHK.Rd
+1faf543f4f3f302d526d3409852dc54e *man/asynchDataTD.Rd
+3ce51a3933fa272cb07b04a1033e0369 *man/asynchDataTI.Rd
+89ff5935d6f94b84e988fffca92f147b *man/asynchHK.Rd
 0606625bcad10ecca06929a6bba5c4d7 *man/asynchLV.Rd
-6cdc40dcb833cbd06c8082e2764cf8fd *man/asynchTD.Rd
-adaafa00a3aa958d30ff1a6c9008bfc5 *man/asynchTI.Rd
-639fdad1439d1b772670af062eb41b07 *man/asynchWLV.Rd
+55534375b1307f22de1d1a68801dff96 *man/asynchTD.Rd
+cdb0cd49ca334e4a5ab454636c9cc463 *man/asynchTI.Rd
+9782afccff157128eb43a47f954883ee *man/asynchWLV.Rd
