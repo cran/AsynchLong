@@ -1,6 +1,6 @@
-5300eb3b14bede18caadb18070c4e053 *DESCRIPTION
+fa2be4c8cdac5e4573672a363ad400e4 *DESCRIPTION
 7a1298493b03b5658c733f4021a8f340 *NAMESPACE
-9fc4d1eb2cea61a631a38b3ba8033470 *NEWS
+34dbda9d287a807956413b62ebfe9043 *NEWS
 86fbecffe27dce4b16d5f385a0fc95df *R/SD.R
 e68d12d2c0b211b6bb192950912417f2 *R/asynchHK.R
 efd47cb6efd2654811370553af5a98b9 *R/asynchLV.R
@@ -21,7 +21,6 @@ dd0e04354a23205b4ea8eb0e54a6e57b *R/kernelFixed.R
 e55d907ed91b7d7acc5aca4dec916e40 *R/uFuncIden.R
 e2759d5923816fa8a69de35405c4df0e *data/asynchDataTD.RData
 7217f70faa29332a062207204dc1a9ad *data/asynchDataTI.RData
-1471009a649eb881da064677b20bafaf *man/AsynchLong-package.Rd
 1faf543f4f3f302d526d3409852dc54e *man/asynchDataTD.Rd
 3ce51a3933fa272cb07b04a1033e0369 *man/asynchDataTI.Rd
 89ff5935d6f94b84e988fffca92f147b *man/asynchHK.Rd
